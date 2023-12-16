@@ -17,16 +17,26 @@ img {
   width: 100%;
 }
 
+/* Task 1 */
+.item {
+  padding: 16px;
+  margin-bottom: 24px;
+  background-color: rgba(246, 246, 254, 1);
+  list-style: none;
+}
 /* Task 2 */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
+  row-gap: 48px;
+  padding: 0;
   list-style: none;
 }
-.gallery-item {
+.img-element {
   width: 360px;
   height: 300px;
   object-fit: cover;
 }
+/* Task 3 */
