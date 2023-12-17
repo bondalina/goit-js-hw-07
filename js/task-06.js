@@ -10,29 +10,29 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function createBoxes(amount) {
-  for (let i = 0; i < amount; i += 1) {
-    const box = document.createElement('div');
-    const size = 30 + i * 10;
-    
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    
-    box.style.backgroundColor = getRandomHexColor();
-
-    divBox.append(box);
-  }
-}
-createBtn.addEventListener('click', () => {
+function createBoxes() {
+  destroyBoxes();
   const amount = Number(input.value);
 
   if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    input.value = '';
-  } 
-});
+    for (let i = 0; i < amount; i += 1) {
+      const box = document.createElement("div");
+      const size = 30 + i * 10;
+    
+      box.style.width = `${size}px`;
+      box.style.height = `${size}px`;
+    
+      box.style.backgroundColor = getRandomHexColor();
+
+      divBox.append(box);
+    }
+    input.value = "";
+  }
+}
+
+createBtn.addEventListener("click", createBoxes);
 
 function destroyBoxes() {
-  divBox.innerHTML = '';
+  divBox.innerHTML = "";
 }
-destroyBtn.addEventListener('click', destroyBoxes);
+destroyBtn.addEventListener("click", destroyBoxes);
