@@ -41,6 +41,17 @@ li {
   background-color: rgba(246, 246, 254, 1);
   width: 392px;
 }
+#categories ul li {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+#categories ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+#categories h2 {
+  margin-bottom: 16px;
+}
 
 /* Task 2 */
 .gallery {
