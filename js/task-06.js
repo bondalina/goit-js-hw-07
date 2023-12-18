@@ -13,19 +13,19 @@ function getRandomHexColor() {
 function createBoxes() {
   destroyBoxes();
   const amount = Number(input.value);
+  const boxArr = [];
 
   if (amount >= 1 && amount <= 100) {
     for (let i = 0; i < amount; i += 1) {
       const box = document.createElement("div");
       const size = 30 + i * 10;
-    
       box.style.width = `${size}px`;
       box.style.height = `${size}px`;
-    
       box.style.backgroundColor = getRandomHexColor();
 
-      divBox.append(box);
+      boxArr.push(box);
     }
+    divBox.append(...boxArr);
     input.value = "";
   }
 }
