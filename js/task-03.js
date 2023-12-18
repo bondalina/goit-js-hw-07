@@ -5,8 +5,8 @@ const newName = () => {
     const inputText = input.value.trim();
     let outputText;
 
-    if (inputText === '') {
-        outputText = 'Anonymous';
+    if (inputText === "") {
+        outputText = "Anonymous";
     } else {
         outputText = inputText;
     }
